@@ -20,7 +20,7 @@ function processus(){
    return procede;
 }
 
-const processus_enfant = processus()
+let processus_enfant = processus()
 const watcher  = watch("./", {recursive:true})
 for await (const event of watcher){
         if(event.filename.endsWith(".js")){
