@@ -14,7 +14,11 @@ function processus(){
         console.error(data.toString("utf8"))
     })
     process.on("close", (code)=>{
+        if(code>0){
+            throw new Error("process exited with code: "+code)
+        }
         console.log("process exited with "+code);
+
     })
 
    return process;
