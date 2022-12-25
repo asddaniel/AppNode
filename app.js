@@ -5,7 +5,7 @@ import route from './route.js';
 const server =  createServer(async (req, res)=>{
     
     // const url = new URL(req.url, `http://${req.headers.host}`)
-    //method 
+    //method  getparameters
     console.log(req.url)
     if(req.method=="POST"){
         let get_response = async function(){
