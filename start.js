@@ -4,31 +4,27 @@ import { watch } from "fs/promises"
 const [node, _, file] = process.argv
 
 function processus(){
-    const process = spawn(node, [file])
+    const procede = spawn(node, [file])
 
-    process.stdout.on("data", (data)=>{
-        console.log(data.toString("utf8"))
-    })
+    procede.stdout.pipe(process.stdout)
     
-    process.stderr.on("data", (data)=>{
-        console.error(data.toString("utf8"))
-    })
-    process.on("close", (code)=>{
-        if(code>0){
-            throw new Error("process exited with code: "+code)
+    procede.stderr.pipe(process.stderr)
+    procede.on("close", (code)=>{
+        if(code!==null){
+            process.exit(code)
         }
         console.log("process exited with "+code);
 
     })
 
-   return process;
+   return procede;
 }
 
 const processus_enfant = processus()
 const watcher  = watch("./", {recursive:true})
 for await (const event of watcher){
         if(event.filename.endsWith(".js")){
-            processus_enfant.kill()
+            processus_enfant.kill("SIGKILL")
             processus_enfant = processus()
         }
 }
