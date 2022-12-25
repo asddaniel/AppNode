@@ -29,3 +29,7 @@ width: 50%;
 justify-content: space-between;
 align-items: center;
 }
+.body{
+    top: 12vh;
+    text-align: center;
+}
