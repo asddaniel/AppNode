@@ -35,15 +35,15 @@ align-items: center;
 }
 .divider{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 4fr;
     row-gap: 1vh;
     column-gap: 1fr;
 }
 .galerie{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 1vh;
-    row-gap: 1fr;
+    column-gap: 0.5vh;
+    row-gap: 1vh;
 }
 .galerie img{
     max-width: 20vw;
