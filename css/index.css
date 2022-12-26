@@ -39,3 +39,7 @@ align-items: center;
     row-gap: 1vh;
     column-gap: 1fr;
 }
+.galerie{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
