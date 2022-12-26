@@ -33,3 +33,6 @@ align-items: center;
     top: 12vh;
     text-align: center;
 }
+.divider{
+    display: grid;
+}
