@@ -7,7 +7,7 @@ const server =  createServer(async (req, res)=>{
     
      const url = new URL(req.url, `http://${req.headers.host}`)
     //method  getparameters
-     console.log(req.buffer)
+     
     if(req.method=="POST"){
         let get_response = async function(){
             return await buffer(req)

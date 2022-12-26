@@ -15,6 +15,8 @@ const route =  async function(endpoint){
             break;
         case '/css' : return createReadStream("css/index.css");
             break;
+        case '/img' : return createReadStream("images/reka.jpg");
+            break;
         default: return createReadStream("templates/index.html");
         break;
     }
