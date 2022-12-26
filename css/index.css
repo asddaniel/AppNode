@@ -48,3 +48,10 @@ align-items: center;
 .galerie img{
     max-width: 20vw;
 }
+.presenter{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-style: oblique;
+}
