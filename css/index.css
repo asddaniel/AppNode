@@ -35,4 +35,7 @@ align-items: center;
 }
 .divider{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1vh;
+    column-gap: 1fr;
 }
