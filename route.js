@@ -3,9 +3,9 @@ import { createReadStream } from "fs"
 
 const route =  async function(endpoint){
     
-    if(endpoint.match("accueil")){
-        return createReadStream("templates/index.html");
-    }
+    // if(endpoint.match("accueil")){
+    //     return createReadStream("templates/index.html");
+    // }
     switch(endpoint){
         case '/accueil':  return createReadStream("templates/index.html");
             break;
