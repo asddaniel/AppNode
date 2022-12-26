@@ -45,3 +45,6 @@ align-items: center;
     column-gap: 1vh;
     row-gap: 1fr;
 }
+.galerie img{
+    max-width: 20vw;
+}
